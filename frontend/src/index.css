@@ -1,0 +1,968 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =========================================
+   DJENDJEN PORT
+   SMART TERMINAL COMMAND CENTER UI
+========================================= */
+
+
+*{
+    box-sizing:border-box;
+}
+
+
+html,
+body,
+#root{
+
+    width:100%;
+    min-height:100%;
+
+}
+
+
+body{
+
+    margin:0;
+
+    font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        #13233f 0%,
+        #020617 45%
+    );
+
+    color:#e2e8f0;
+
+}
+
+
+/* =========================
+   APP STRUCTURE
+========================= */
+
+
+.app-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+.main-content{
+
+    flex:1;
+
+    margin-left:260px;
+
+    padding:35px;
+
+    min-height:100vh;
+
+}
+
+
+
+
+
+/* =========================
+        SIDEBAR
+========================= */
+
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:260px;
+
+    height:100vh;
+
+
+    padding:25px 18px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #101b33,
+        #020617
+    );
+
+
+    border-right:
+
+    1px solid
+    rgba(148,163,184,.15);
+
+}
+
+
+
+.sidebar-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:45px;
+
+}
+
+
+
+.logo-icon{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    border-radius:16px;
+
+
+    background:#06b6d4;
+
+    color:#020617;
+
+
+    box-shadow:
+
+    0 0 25px
+    rgba(6,182,212,.45);
+
+}
+
+
+
+.sidebar-logo h2{
+
+    margin:0;
+
+    font-size:21px;
+
+    font-weight:900;
+
+    color:white;
+
+}
+
+
+
+.sidebar-logo span{
+
+    font-size:12px;
+
+    color:#94a3b8;
+
+}
+
+
+
+
+
+.sidebar-nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+
+.nav-item{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+
+    padding:13px 15px;
+
+
+    border-radius:14px;
+
+
+    color:#94a3b8;
+
+    text-decoration:none;
+
+
+    transition:.25s;
+
+}
+
+
+
+.nav-item svg{
+
+    width:21px;
+
+    height:21px;
+
+}
+
+
+
+.nav-item:hover{
+
+
+    background:
+    rgba(255,255,255,.05);
+
+    color:white;
+
+}
+
+
+
+.nav-item.active{
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #0891b2,
+        #06b6d4
+    );
+
+
+    color:white;
+
+
+    box-shadow:
+
+    0 0 25px
+    rgba(6,182,212,.35);
+
+}
+
+
+
+
+
+.sidebar-footer{
+
+
+    margin-top:auto;
+
+
+    padding:16px;
+
+
+    border-radius:16px;
+
+
+    background:#111827;
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.system-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+
+    background:#22c55e;
+
+
+    box-shadow:
+
+    0 0 12px
+    #22c55e;
+
+}
+
+
+
+
+
+/* =========================
+        HEADER
+========================= */
+
+
+.page-header{
+
+    margin-bottom:35px;
+
+}
+
+
+.page-label{
+
+    letter-spacing:4px;
+
+    font-size:12px;
+
+    color:#38bdf8;
+
+}
+
+
+
+.page-header h1{
+
+
+    margin:10px 0;
+
+
+    font-size:42px;
+
+    font-weight:900;
+
+    color:white;
+
+
+}
+
+
+
+.page-header p:last-child{
+
+    color:#94a3b8;
+
+    font-size:17px;
+
+}
+
+
+
+
+
+/* =========================
+        KPI CARDS
+========================= */
+
+
+.kpi-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+
+    gap:22px;
+
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+.metric-card{
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    padding:26px;
+
+
+    min-height:170px;
+
+
+    border-radius:24px;
+
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(17,24,39,.95),
+        rgba(2,6,23,.95)
+    );
+
+
+
+    border:
+
+    1px solid
+    rgba(148,163,184,.15);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.metric-card:hover{
+
+
+    transform:translateY(-6px);
+
+
+    border-color:#06b6d4;
+
+
+    box-shadow:
+
+    0 20px 45px
+    rgba(6,182,212,.15);
+
+}
+
+
+
+.metric-top{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+
+    color:#94a3b8;
+
+}
+
+
+
+.metric-top svg{
+
+
+    color:#06b6d4;
+
+}
+
+
+
+.metric-card strong{
+
+
+    display:block;
+
+
+    margin-top:20px;
+
+
+    font-size:38px;
+
+
+    font-weight:900;
+
+
+    color:white;
+
+}
+
+
+
+.metric-card p{
+
+    color:#94a3b8;
+
+}
+
+
+
+.ai-card strong{
+
+
+    color:#22c55e;
+
+
+    text-shadow:
+
+    0 0 25px
+    rgba(34,197,94,.6);
+
+}
+
+
+
+
+/* =========================
+        PANELS
+========================= */
+
+
+.dashboard-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    2fr 1fr;
+
+
+    gap:25px;
+
+}
+
+
+
+.panel{
+
+
+    padding:30px;
+
+
+    border-radius:26px;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #111827,
+        #07101f
+    );
+
+
+    border:
+
+    1px solid
+    rgba(148,163,184,.15);
+
+
+}
+
+
+
+.panel h2{
+
+
+    margin-top:0;
+
+
+    font-size:26px;
+
+
+    color:white;
+
+}
+
+
+
+
+
+/* STORAGE */
+
+
+.storage-stats{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+
+    gap:20px;
+
+}
+
+
+
+
+.storage-stats div{
+
+
+    padding:22px;
+
+
+    border-radius:18px;
+
+
+    background:#020617;
+
+}
+
+
+
+.storage-stats span{
+
+
+    color:#94a3b8;
+
+}
+
+
+
+.storage-stats strong{
+
+
+    display:block;
+
+    margin-top:8px;
+
+
+    font-size:32px;
+
+}
+
+
+
+.progress{
+
+
+    margin-top:15px;
+
+
+    height:18px;
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+    background:#1e293b;
+
+}
+
+
+
+.progress div{
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #06b6d4,
+        #22d3ee
+    );
+
+}
+
+
+
+
+.zone-box{
+
+
+    margin-top:35px;
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    background:#020617;
+
+}
+
+
+
+.zone-box svg{
+
+
+    color:#06b6d4;
+
+}
+
+
+
+
+
+/* =========================
+        AI PANEL
+========================= */
+
+
+.ai-status{
+
+
+    text-align:center;
+
+
+    padding:25px;
+
+}
+
+
+
+.ai-status svg{
+
+
+    color:#06b6d4;
+
+
+    filter:
+
+    drop-shadow(
+        0 0 20px
+        #06b6d4
+    );
+
+}
+
+
+
+.ai-row{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+    padding:18px 0;
+
+
+    border-bottom:
+
+    1px solid
+    #1e293b;
+
+}
+
+
+
+.ai-row strong{
+
+
+    margin-left:auto;
+
+
+    color:#22c55e;
+
+}
+
+
+
+
+
+/* =========================
+        OPERATIONS
+========================= */
+
+
+.operations-panel{
+
+
+    margin-top:30px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.operations-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+
+    gap:25px;
+
+}
+
+
+
+.operations-grid div{
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    background:#020617;
+
+
+    transition:.25s;
+
+}
+
+
+
+.operations-grid div:hover{
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+.operations-grid svg{
+
+
+    width:35px;
+
+    height:35px;
+
+
+    color:#06b6d4;
+
+}
+
+
+
+
+/* =========================
+        LOADING
+========================= */
+
+
+.loading{
+
+
+    min-height:100vh;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    flex-direction:column;
+
+
+    color:#06b6d4;
+
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+
+@media(max-width:1000px){
+
+
+.sidebar{
+
+    width:80px;
+
+}
+
+
+
+.sidebar-logo h2,
+.sidebar-logo span,
+.nav-item span{
+
+    display:none;
+
+}
+
+
+
+.main-content{
+
+    margin-left:80px;
+
+}
+
+
+
+.kpi-grid{
+
+    grid-template-columns:
+    1fr 1fr;
+
+}
+
+
+
+.dashboard-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.operations-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}

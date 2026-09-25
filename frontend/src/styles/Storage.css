@@ -1,0 +1,1128 @@
+/* =====================================================
+   STORAGE MANAGEMENT PAGE
+   DJENDJEN SMART TERMINAL UI
+===================================================== */
+
+
+.storage-page{
+
+    width:100%;
+
+}
+
+
+
+/* ===============================
+   HEADER
+================================ */
+
+
+.storage-header{
+
+    margin-bottom:35px;
+
+}
+
+
+.storage-header span{
+
+    color:#38bdf8;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    font-weight:700;
+
+}
+
+
+.storage-header h1{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:12px 0;
+
+    font-size:42px;
+
+    font-weight:900;
+
+    color:white;
+
+}
+
+
+.storage-header p{
+
+    color:#94a3b8;
+
+    font-size:17px;
+
+}
+
+
+
+
+/* ===============================
+   KPI CARDS
+================================ */
+
+
+.storage-kpis{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.storage-kpis div{
+
+
+    min-height:150px;
+
+
+    padding:25px;
+
+
+    border-radius:24px;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #111827,
+        #020617
+    );
+
+
+    border:
+
+    1px solid
+    rgba(148,163,184,.15);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.storage-kpis div:hover{
+
+
+    transform:none;
+
+
+    box-shadow:none;
+
+
+    border-color:rgba(148,163,184,.25);
+
+
+}
+
+
+
+.storage-kpis svg{
+
+
+    color:#06b6d4;
+
+
+    width:30px;
+
+
+    height:30px;
+
+
+}
+
+
+
+.storage-kpis label{
+
+
+    display:block;
+
+
+    color:#94a3b8;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+.storage-kpis strong{
+
+
+    display:block;
+
+
+    margin-top:10px;
+
+
+    font-size:38px;
+
+
+    font-weight:900;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+/* ===============================
+   PANELS
+================================ */
+
+
+.storage-panel{
+
+
+    padding:30px;
+
+
+    margin-bottom:30px;
+
+
+    border-radius:26px;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #111827,
+        #07101f
+    );
+
+
+    border:
+
+    1px solid
+    rgba(148,163,184,.15);
+
+
+}
+
+
+
+.section-title{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.section-title h2{
+
+
+    margin:0;
+
+
+    color:white;
+
+
+    font-size:26px;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+
+.section-title button,
+
+
+.storage-modal button{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:8px;
+
+
+    padding:12px 22px;
+
+
+    border:none;
+
+
+    border-radius:14px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #0891b2,
+        #06b6d4
+    );
+
+
+    color:#020617;
+
+
+    font-weight:900;
+
+
+    cursor:pointer;
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.section-title button:hover,
+
+
+.storage-modal button:hover{
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+    0 15px 35px
+    rgba(6,182,212,.35);
+
+
+}
+
+
+
+/* ===============================
+   ZONES
+================================ */
+
+
+.zone-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:22px;
+
+
+}
+
+
+
+.zone-card{
+
+
+    padding:25px;
+
+
+    border-radius:22px;
+
+
+    background:#020617;
+
+
+    border:
+
+    1px solid
+    rgba(148,163,184,.15);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.zone-card:hover{
+
+
+    transform:none;
+
+
+    box-shadow:none;
+
+
+    border-color:rgba(148,163,184,.25);
+
+
+}
+
+
+
+.zone-card h3{
+
+
+    color:white;
+
+
+    font-size:22px;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+.zone-card p{
+
+
+    color:#38bdf8;
+
+
+    font-weight:700;
+
+
+    margin-top:8px;
+
+
+}
+
+
+
+.capacity{
+
+
+    margin-top:25px;
+
+
+    padding:18px;
+
+
+    border-radius:16px;
+
+
+    background:#111827;
+
+
+    color:#94a3b8;
+
+
+}
+
+
+
+.capacity strong{
+
+
+    display:block;
+
+
+    color:white;
+
+
+    font-size:32px;
+
+
+    margin-top:5px;
+
+
+}
+
+
+
+
+
+/* ===============================
+   ACTION BUTTONS
+================================ */
+
+
+.actions{
+
+
+    display:flex;
+
+
+    gap:10px;
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+.actions button{
+
+
+    width:40px;
+
+
+    height:40px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    border-radius:12px;
+
+
+    background:#020617;
+
+
+    border:
+
+    1px solid
+    rgba(148,163,184,.2);
+
+
+    color:#38bdf8;
+
+
+    cursor:pointer;
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.actions button:hover{
+
+
+    border-color:#06b6d4;
+
+
+    transform:translateY(-3px);
+
+
+}
+
+
+
+.actions button:last-child{
+
+
+    color:#fb7185;
+
+
+}
+
+
+
+
+/* ===============================
+   FILTERS
+================================ */
+
+
+.filters{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+    align-items:center;
+
+}
+
+
+
+.filters > div{
+
+    flex:1;
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:0 18px;
+
+    border-radius:15px;
+
+    background:#020617;
+
+    border:1px solid rgba(148,163,184,.2);
+
+    overflow:hidden;
+
+}
+
+
+
+.filters > div svg{
+
+    color:#06b6d4;
+
+    flex-shrink:0;
+
+}
+
+
+
+.filters > div input{
+
+    flex:1;
+
+    width:100%;
+
+    height:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+
+.filters > div input::placeholder{
+
+    color:#64748b;
+
+}
+
+
+
+.filters select{
+
+    flex:1;
+
+    height:50px;
+
+    min-width:220px;
+
+    border-radius:15px;
+
+    padding:0 18px;
+
+    background:#020617;
+
+    color:white;
+
+    border:1px solid rgba(148,163,184,.2);
+
+}
+
+/* ===============================
+   POSITIONS
+================================ */
+
+
+.position-list{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:14px;
+
+
+}
+
+
+
+.position-card{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    2fr
+    1fr
+    150px
+    auto;
+
+
+    align-items:center;
+
+
+    padding:20px;
+
+
+    border-radius:20px;
+
+
+    background:#020617;
+
+
+    border:
+
+    1px solid
+    rgba(148,163,184,.12);
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.position-card:hover{
+
+
+    transform:none;
+
+
+    box-shadow:none;
+
+
+    border-color:rgba(148,163,184,.25);
+
+
+}
+
+
+
+.position-card h3{
+
+
+    color:white;
+
+
+    font-size:20px;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+.position-card p{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:8px;
+
+
+    color:#94a3b8;
+
+
+}
+
+
+
+.position-card strong{
+
+
+    color:white;
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+/* ===============================
+   STATUS
+================================ */
+
+
+.position-card span{
+
+
+    padding:8px 16px;
+
+
+    border-radius:999px;
+
+
+    font-weight:900;
+
+
+    width:max-content;
+
+
+}
+
+
+
+.position-card .free{
+
+
+    background:
+    rgba(34,197,94,.15);
+
+
+    color:#4ade80;
+
+
+}
+
+
+
+.position-card .occupied{
+
+
+    background:
+    rgba(244,63,94,.15);
+
+
+    color:#fb7185;
+
+
+}
+
+
+
+
+
+/* ===============================
+   MODAL
+================================ */
+
+
+.storage-modal-bg{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:
+
+    rgba(0,0,0,.75);
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    z-index:1000;
+
+
+}
+
+
+
+.storage-modal{
+
+
+    width:450px;
+
+
+    padding:35px;
+
+
+    border-radius:26px;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #111827,
+        #020617
+    );
+
+
+    border:
+
+    1px solid
+    rgba(148,163,184,.2);
+
+
+}
+
+
+
+.storage-modal svg{
+
+
+    float:right;
+
+
+    color:#94a3b8;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+.storage-modal h2{
+
+
+    color:white;
+
+
+    font-size:26px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.storage-modal input{
+
+
+    width:100%;
+
+
+    height:50px;
+
+
+    margin-bottom:15px;
+
+
+    padding:0 16px;
+
+
+    border-radius:14px;
+
+
+    background:#020617;
+
+
+    color:white;
+
+
+    border:
+
+    1px solid
+    rgba(148,163,184,.2);
+
+
+    outline:none;
+
+
+}
+
+
+
+.storage-modal input:focus{
+
+
+    border-color:#06b6d4;
+
+
+}
+
+
+
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+
+@media(max-width:1200px){
+
+
+.storage-kpis{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.zone-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:800px){
+
+
+.filters{
+
+flex-direction:column;
+
+}
+
+
+.position-card{
+
+grid-template-columns:1fr;
+
+gap:15px;
+
+}
+
+
+}
+
+
+
+/* =========================
+   STORAGE MODAL SELECTS
+========================= */
+
+.modal select,
+.modal-select{
+
+    width:100%;
+
+    height:52px;
+
+    margin-bottom:15px;
+
+    padding:0 16px;
+
+    border-radius:14px;
+
+    background:#020617;
+
+    color:white;
+
+    border:1px solid rgba(148,163,184,.18);
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+
+.modal select:focus,
+.modal-select:focus{
+
+    border-color:#06b6d4;
+
+}
+
+
+/* REMOVE CARD MOVEMENT */
+
+.zone-card,
+.position-card,
+.storage-kpis div{
+
+    transition:none !important;
+
+}
+
+
+.zone-card:hover,
+.position-card:hover,
+.storage-kpis div:hover{
+
+    transform:none !important;
+
+    box-shadow:none !important;
+
+}
+
+
+/* ===============================
+   STORAGE CLICK FIX
+=============================== */
+
+.storage-page{
+    position:relative;
+    z-index:1;
+}
+
+
+.storage-panel{
+    position:relative;
+    z-index:2;
+}
+
+
+.filters{
+    position:relative;
+    z-index:3;
+}
+

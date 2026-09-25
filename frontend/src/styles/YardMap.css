@@ -1,0 +1,227 @@
+.yard-page{
+
+    width:100%;
+
+    padding:30px;
+
+    color:white;
+
+}
+
+
+
+.yard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.yard-header h1{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:34px;
+
+    margin:0;
+
+}
+
+
+
+.yard-header p{
+
+    margin-top:8px;
+
+    color:#94a3b8;
+
+    font-size:16px;
+
+}
+
+
+
+
+
+.yard-search{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+
+
+.yard-search input{
+
+    width:260px;
+
+    height:45px;
+
+    padding:0 15px;
+
+    border-radius:10px;
+
+    border:1px solid #334155;
+
+    background:#0f172a;
+
+    color:white;
+
+    outline:none;
+
+}
+
+
+
+.yard-search input::placeholder{
+
+    color:#64748b;
+
+}
+
+
+
+.yard-search button{
+
+    height:45px;
+
+    padding:0 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#06b6d4;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+.yard-search button:hover{
+
+    opacity:0.85;
+
+}
+
+
+
+
+
+.map-container{
+
+    width:100%;
+
+    height:75vh;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid #1e293b;
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.35);
+
+}
+
+
+
+
+
+.leaflet-map{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+
+
+
+
+.leaflet-popup-content-wrapper{
+
+    background:#0f172a;
+
+    color:white;
+
+    border-radius:12px;
+
+}
+
+
+
+.leaflet-popup-tip{
+
+    background:#0f172a;
+
+}
+
+
+
+.leaflet-popup-content h3{
+
+    color:#22d3ee;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.leaflet-popup-content p{
+
+    margin:5px 0;
+
+    color:#cbd5e1;
+
+}
+
+
+
+
+
+.leaflet-control-layers{
+
+    background:#0f172a !important;
+
+    color:white;
+
+    border-radius:10px;
+
+    border:none;
+
+}
+
+
+
+.leaflet-control-layers label{
+
+    color:white;
+
+}
