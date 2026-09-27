@@ -225,9 +225,6 @@ return (
 <div className="page-header">
 
 
-<p className="page-label">
-OPERATIONS
-</p>
 
 
 <h1>
